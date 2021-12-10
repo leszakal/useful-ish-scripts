@@ -7,13 +7,13 @@ def update():
         print(line.decode())
         
 def install_spc():
-    p = subprocess.call(['sudo', 'apt', 'install', 'software-properties-common'])
+    p = subprocess.call(['sudo', 'apt', 'install', '-y', 'software-properties-common'])
                                  
 def add_repo():
     p = subprocess.call(['sudo', 'add-apt-repository', '--yes', '--update', 'ppa:ansible/ansible'])
                                  
 def install_ansible_pkg():
-    p = subprocess.call(['sudo', 'apt', 'install', 'ansible'])
+    p = subprocess.call(['sudo', 'apt', 'install', 'y', 'ansible'])
 
 update()
 install_spc()
